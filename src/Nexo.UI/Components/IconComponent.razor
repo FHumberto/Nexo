@@ -1,0 +1,56 @@
+﻿@code
+{
+#pragma warning disable CS8600, CS8603, CS8604
+
+    [Parameter]
+    public string? IconName { get; set; }
+
+    [Parameter]
+    public string? Size { get; set; }
+
+    [Parameter]
+    public string? Color { get; set; } = default;
+
+    private SvgIcon Icon => GetIconByName(IconName);
+
+    private SvgIcon GetIconByName(string iconName)
+    {
+        string[]? parts = iconName.Split('.');
+
+        if (parts.Length != 2)
+        {
+            return GetDefaultIcon();
+        }
+
+        string? iconType = parts[0];
+        string? iconNameOnly = parts[1];
+
+        return GetIconByTypeAndName(iconType, iconNameOnly) ?? GetDefaultIcon();
+    }
+
+    private SvgIcon GetIconByTypeAndName(string iconType, string iconName)
+    {
+        Type iconTypeClass = iconType switch
+        {
+            "BootstrapIcon" => typeof(BootstrapIcon),
+            "DeviconLine" => typeof(DeviconLine),
+            "DeviconOriginal" => typeof(DeviconOriginal),
+            "DeviconPlain" => typeof(DeviconPlain),
+            "MdiIcon" => typeof(MdiIcon),
+            _ => null
+        };
+
+        return iconTypeClass?.GetProperty(iconName)?.GetValue(null) as SvgIcon;
+    }
+
+    private SvgIcon GetDefaultIcon()
+    {
+        return (SvgIcon)typeof(BootstrapIcon).GetProperty("ExclamationDiamondFill")?.GetValue(null);
+    }
+
+#pragma warning restore CS8600, CS8603, CS8604
+}
+
+<div class="@Size @Color">
+    <Blazicon Svg="@Icon"></Blazicon>
+</div>
