@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <b>TEMPLATE_NET-B</b>
+  <b>Nexo</b>
   <br>
 </h1>
 
@@ -18,31 +18,31 @@
 
 ## **Sobre**
 
-Aqui vai uma breve descrição referente ao projeto. Objetivos. E a motivação que levou a sua construção.
+Este projeto foi desenvolvido com o intuito de consolidar todas as informações relevantes sobre minha trajetória profissional e interesses na área de programação.
 
 ## **Informações Técnicas**
 
 ### **Tecnologias**
 
-Aqui fica a lista das ferramentas e tecnologias utilizadas.
+O projeto foi construído utilizando as seguintes tecnologias:
 
+* Blazor WebAssembly
 * C# 10
 * .NET 8
-* Entity Framework 8
 
 ### **Fundamentos**
 
-Arquiteturas utilizadas e limitações de design.
+Por design, o projeto foi construido utilizando os seguintes fundamentos:
 
-* Clean Architecture
-* Client Side
+* Design simples e direto.
+* Estrutura modular para garantir a flexibilidade dos dados, evitando alterações constantes na base do projeto.
+* Camada única de apresentação, sem inclusão de back-end, para se enquadrar a hospedagem estática no GitHub Pages.
 
 ### **Como Rodar?**
 
-
 #### **1. Preparação**
 
-Para clonar este repositório, você precisará ter o [Git](https://git-scm.com) e o .NET respectivo instalado em sua máquina sua máquina.
+Para clonar este repositório, você precisará ter o [Git](https://git-scm.com) e o .NET 8, instalado em sua máquina sua máquina.
 
 #### **2. Rodando**
 
@@ -57,7 +57,3 @@ dotnet build
 ```shell
 dotnet run --project <CAMINHO_DO_PROJETO>
 ```
-
-## **Licença**
-
-[INCLUIR INFORMAÇÕES DA LICENÇA AQUI]
