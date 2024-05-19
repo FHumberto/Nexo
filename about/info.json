@@ -1,0 +1,11 @@
+{
+    "Name": "Nome do projeto",
+    "Cover": "about/cover_600x400.svg",
+    "Demo": "Link para demonstração do projeto",
+    "Type": "Tipo do Projeto (Pessoal, Profissional (PF), Estudo)",
+    "Category": "Categoria em que o projeto se enquadra (Infraestrutura, Web-Back-End, Front-End, Full-Stack, GameDesign, ...)",
+    "Description": "Descrição do projeto",
+    "Tech": [
+        "Tecnologias utilizadas no desenvolvimento (linguagens, frameworks e etc.)"
+    ]
+}
