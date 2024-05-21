@@ -80,4 +80,33 @@
         </div>
     </section>
 
+    <section id="services">
+        <div>
+            <h2>Meus Serviços</h2>
+        </div>
+
+        <div id="servicesContainer">
+            @if (_services is null)
+            {
+                <p>Carregando...</p>
+            }
+            else
+            {
+                foreach (var service in _services)
+                {
+                    <div class="serviceCard">
+
+                        <h3>@service.Title</h3>
+
+                        <IconComponent IconName="@service.Icon" Size="icon-large" />
+
+                        <div class="serviceCard-body">
+                            <p>@service.Body</p>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </section>
+
 </div>

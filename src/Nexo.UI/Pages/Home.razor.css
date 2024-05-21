@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4rem;
+    gap: 10rem;
 }
 
 #lead
@@ -12,6 +12,15 @@
     flex-direction: column;
     justify-content: center;
     height: calc(100vh - 4rem);
+}
+
+#summary,
+#services
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
 }
 
 .lead-tittle-pri
@@ -75,14 +84,6 @@
     border-radius: 0.2rem;
     padding: 0.5rem 0.9rem;
     max-width: initial;
-}
-
-#summary
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
 }
 
 #summaryContainer
@@ -152,9 +153,47 @@
     order: 0;
 }
 
+#servicesContainer
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+    gap: 3rem;
+}
+
+.serviceCard
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    border: 0.1rem solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--grid-color-card-background);
+    padding: 2rem;
+}
+
+.serviceCard-title
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.serviceCard-body
+{
+    text-align: center;
+}
+
+
 .contact-icon:hover,
 .tools-li:hover,
-.points-li:hover
+.points-li:hover,
+.serviceCard:hover
 {
     transition: 0.7s;
     background-color: var(--link-color);

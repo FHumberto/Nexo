@@ -12,3 +12,8 @@
 {
     font-size: clamp(4rem, 6vw, 6rem);
 }
+
+.icon-large
+{
+    font-size: clamp(6rem, 8vw, 8rem);
+}

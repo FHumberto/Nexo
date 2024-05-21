@@ -1,0 +1,22 @@
+[
+    {
+        "Icon": "BootstrapIcon.Joystick",
+        "Title": "Desenvolvimento de Jogos",
+        "Body": "Implementação de game design em motores gráficos como Unity, UE4 e UE5."
+    },
+    {
+        "Icon": "BootstrapIcon.WindowDesktop",
+        "Title": "Aplicações Desktop",
+        "Body": "Desenvolvimento de aplicações exclusivas para sistemas operacionais Windows ou Linux. Em que o usuário necessita instalar o software em sua máquina."
+    },
+    {
+        "Icon": "BootstrapIcon.Globe",
+        "Title": "Aplicações Web",
+        "Body": "Desde landing pages, sites pessoais, comerciais ou lojas virtuais, até sistemas mais complexos."
+    },
+    {
+        "Icon": "BootstrapIcon.Server",
+        "Title": "Infraestrutura e Hospedagem",
+        "Body": "Auxílio na configuração de servidores para hospedagem e/ou aplicações, bem como consultoria em diversos tipos de hospedagem."
+    }
+]
