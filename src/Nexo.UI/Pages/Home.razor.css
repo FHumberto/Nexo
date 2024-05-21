@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    gap: 4rem;
 }
 
 #lead
@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: calc(100vh - 8rem);
+    height: calc(100vh - 4rem);
 }
 
 .lead-tittle-pri
@@ -77,8 +77,85 @@
     max-width: initial;
 }
 
-    .contact-icon:hover
-    {
-        transition: 0.7s;
-        background-color: var(--link-color);
-    }
+#summary
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+#summaryContainer
+{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.summaryCard
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.summaryCard-right
+{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.summaryCard-right-tools
+{
+    display: flex;
+    gap: 1rem;
+}
+
+.summaryCard-right-points
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tools-li,
+.points-li
+{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 0.1rem solid var(--border-color);
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.7rem;
+}
+
+.tools-li
+{
+    background-color: var(--grid-color-background);
+}
+
+.points-li
+{
+    background-color: var(--point-color-background);
+}
+
+.summaryCard:nth-child(even) img
+{
+    order: 1;
+}
+
+.summaryCard:nth-child(odd) img
+{
+    order: 0;
+}
+
+.contact-icon:hover,
+.tools-li:hover,
+.points-li:hover
+{
+    transition: 0.7s;
+    background-color: var(--link-color);
+}

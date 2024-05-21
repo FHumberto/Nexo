@@ -1,4 +1,5 @@
 ﻿@page "/"
+@inject HttpClient Http
 
 <PageTitle>Home</PageTitle>
 
@@ -25,6 +26,57 @@
                title="CurriculumVitae" target="_blank">
                 <IconComponent IconName="BootstrapIcon.PersonBadge" Size="icon-small" />
             </a>
+        </div>
+    </section>
+
+    <section id="summary">
+        <div>
+            <h2>O que eu faço?</h2>
+        </div>
+
+        <div id="summaryContainer">
+            @if (_summary is null)
+            {
+                <p>Carregando...</p>
+            }
+            else
+            {
+                foreach (var summary in _summary)
+                {
+                    <div class="summaryCard">
+                        <img src="@summary.Cover" alt="@summary.Title" />
+
+                        <div class="summaryCard-right">
+                            <h3>@summary.Title</h3>
+
+                            <ul class="summaryCard-right-tools">
+                                @if (summary.Tools is not null)
+                                {
+                                    @foreach (var tools in summary.Tools)
+                                    {
+                                        <li class="tools-li" title="@tools.Name">
+                                            <IconComponent IconName="@tools.Icon" Size="icon-small" />
+                                        </li>
+                                    }
+                                }
+                            </ul>
+
+                            <ul class="summaryCard-right-points">
+                                @if (summary.Points is not null)
+                                {
+                                    @foreach (string point in summary.Points)
+                                    {
+                                        <li class="points-li">
+                                            <IconComponent IconName="BootstrapIcon.Check2Square" Size="icon-small" />
+                                            <span>@point</span>
+                                        </li>
+                                    }
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                }
+            }
         </div>
     </section>
 
