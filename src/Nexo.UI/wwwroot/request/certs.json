@@ -1,0 +1,51 @@
+[
+  {
+    "Cover": "https://placehold.co/240x135",
+    "EndDate": "Mar/2024",
+    "Name": "ASP.NET Core - SOLID and Clean Architecture",
+    "Institution": "Udemy",
+    "Instructor": "Trevoir Williams",
+    "Link": "https://www.udemy.com/certificate/UC-8f2a9a86-eb34-447f-973f-e15667da2280/"
+  },
+  {
+    "Cover": "https://placehold.co/240x135",
+    "EndDate": "Set/2023",
+    "Name": "RESTful Web API - The Complete Guide (.NET7 API) Part 1",
+    "Institution": "Udemy",
+    "Instructor": "Bhrugen Patel",
+    "Link": "https://www.udemy.com/certificate/UC-337ed00b-0f98-4650-86aa-9a5bcbaa90ed/"
+  },
+  {
+    "Cover": "https://placehold.co/240x135",
+    "EndDate": "Mar/2023",
+    "Name": ".NET 6 WEB API - Do zero ao avançado",
+    "Institution": "Udemy",
+    "Instructor": "Stephany Henrique de Almeida Batista",
+    "Link": "https://www.udemy.com/certificate/UC-e33d5c86-7236-4d0a-a693-1a3ffd260548/"
+  },
+  {
+    "Cover": "https://placehold.co/240x135",
+    "EndDate": "Jan/2023",
+    "Name": "Fundamentos do Scrum",
+    "Institution": "Linkedin Learning",
+    "Instructor": "Kelley O'Connell",
+    "Link": "https://www.linkedin.com/learning/certificates/67671f57f0ea1da530cfb95f693c93efbda21ce21c17d9d1358ec9dc40d277a6?trk=share_certificate"
+  },
+  {
+    "Cover": "https://placehold.co/240x135",
+    "EndDate": "Jan/2023",
+    "Name": "SQL Server: Formação Básica",
+    "Institution": "Linkedin Learning",
+    "Instructor": "Alessandro Trovato",
+    "Link": "https://www.linkedin.com/learning/certificates/62730d0d217d17f7c562bb54d327a58b838fbd0ac8cc94e189f8e234b17589a9?trk=share_certificate"
+  },
+  {
+    "Cover": "https://placehold.co/240x135",
+    "EndDate": "Jan/2023",
+    "Name": "C# COMPLETO Programação Orientada a Objetos + Projetos",
+    "Institution": "Udemy",
+    "Instructor": "Nélio Alves",
+    "Link": "https://www.udemy.com/certificate/UC-e51f4cdb-f018-476c-8b0d-5dc21f90da8a/"
+  }
+
+]
