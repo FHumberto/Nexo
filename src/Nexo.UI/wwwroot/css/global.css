@@ -9,6 +9,7 @@
     --text-color: rgb(255, 255, 255);
     --text-color-sec: rgb(0, 0, 0);
     --link-color: rgb(148, 14, 40);
+    --strong-color: rgb(221, 72, 101);
     --icon-color-background: rgb(53, 49, 49);
     --point-color-background: rgb(38, 41, 44);
     --grid-color-card-background: rgb(38, 38, 38);
@@ -45,6 +46,11 @@ a
         transition: 0.5s;
         color: var(--link-color);
     }
+
+strong
+{
+    color: var(--strong-color)
+}
 
 img
 {

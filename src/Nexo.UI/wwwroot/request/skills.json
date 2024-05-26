@@ -1,0 +1,50 @@
+[
+  {
+    "Icon": "DeviconPlain.Csharp",
+    "Name": "C#"
+  },
+  {
+    "Icon": "DeviconPlain.Cplusplus",
+    "Name": "C++"
+  },
+  {
+    "Icon": "DeviconPlain.Html5",
+    "Name": "HTML5"
+  },
+  {
+    "Icon": "DeviconPlain.Css3",
+    "Name": "CSS3"
+  },
+  {
+    "Icon": "DeviconPlain.Javascript",
+    "Name": "JavaScript"
+  },
+  {
+    "Icon": "MdiIcon.DotNet",
+    "Name": ".NET"
+  },
+  {
+    "Icon": "DeviconLine.Blazor",
+    "Name": "Blazor"
+  },
+  {
+    "Icon": "DeviconPlain.Microsoftsqlserver",
+    "Name": "SQL Server"
+  },
+  {
+    "Icon": "DeviconPlain.Docker",
+    "Name": "Docker"
+  },
+  {
+    "Icon": "MdiIcon.Unreal",
+    "Name": "Unreal Engine"
+  },
+  {
+    "Icon": "MdiIcon.Unity",
+    "Name": "Unity"
+  },
+  {
+    "Icon": "MdiIcon.BlenderSoftware",
+    "Name": "Blender"
+  }
+]
