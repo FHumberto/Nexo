@@ -66,3 +66,44 @@ h3
 {
     font-size: clamp(1.2rem, 3.5vw, 1.5rem);
 }
+
+p, i, span
+{
+    font-size: 0.95rem;
+}
+
+.subSection
+{
+    color: var(--strong-color)
+}
+
+.tooltip-container
+{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+    .tooltip-container::before
+    {
+        content: attr(data-tooltip);
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #333;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+    }
+
+    .tooltip-container:hover::before
+    {
+        opacity: 0.9;
+        visibility: visible;
+    }

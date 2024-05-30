@@ -1,0 +1,115 @@
+[
+  {
+    "Cover": "https://placehold.co/150x250",
+    "StartDate": "Mar/2023",
+    "EndDate": "",
+    "Title": "Programador Full-Stack JR",
+    "Institution": "GetInfo Soluções Corporativas",
+    "Tools":
+    [
+      {
+        "Icon": "DeviconPlain.Csharp",
+        "Name": "C#"
+      },
+      {
+        "Icon": "DeviconPlain.Html5",
+        "Name": "HTML5"
+      },
+      {
+        "Icon": "DeviconPlain.Css3",
+        "Name": "CSS3"
+      },
+      {
+        "Icon": "DeviconPlain.Javascript",
+        "Name": "JavaScript"
+      },
+      {
+        "Icon": "DeviconPlain.Microsoftsqlserver",
+        "Name": "SQL Server"
+      },
+      {
+        "Icon": "DeviconPlain.Docker",
+        "Name": "Docker"
+      },
+      {
+        "Icon": "MdiIcon.React",
+        "Name": "React"
+      },
+      {
+        "Icon": "DeviconPlain.Angular",
+        "Name": "Angular"
+      },
+      {
+        "Icon": "MdiIcon.DotNet",
+        "Name": ".NET"
+      }
+    ],
+    "Points":
+    [
+      "Manutenção e Desenvolvimento de sistemas para a Procuradoria Geral do Estado"
+    ]
+  },
+  {
+    "Cover": "https://placehold.co/150x250",
+    "StartDate": "Mar/2022",
+    "EndDate": "Mai/2022",
+    "Title": "Desenvolvedor Full-Stack (Estágio)",
+    "Institution": "Sysdelta",
+    "Tools":
+    [
+      {
+        "Icon": "DeviconPlain.Html5",
+        "Name": "HTML5"
+      },
+      {
+        "Icon": "DeviconPlain.Css3",
+        "Name": "CSS3"
+      },
+      {
+        "Icon": "DeviconPlain.Javascript",
+        "Name": "JavaScript"
+      },
+      {
+        "Icon": "DeviconPlain.Php",
+        "Name": "PHP"
+      },
+      {
+        "Icon": "DeviconPlain.MysqlWordmark",
+        "Name": "Mysql"
+      },
+      {
+        "Icon": "MdiIcon.Laravel",
+        "Name": "Laravel"
+      }
+    ],
+    "Points":
+    [
+      "Manutenção e desenvolvimento de sistema escolar"
+    ]
+  },
+  {
+    "Cover": "https://placehold.co/150x250",
+    "StartDate": "Jun/2018",
+    "EndDate": "Fev/2021",
+    "Title": "Analista de Redes",
+    "Institution": "Top Web Telecom",
+    "Tools":
+    [
+      {
+        "Icon": "MdiIcon.ServerNetwork",
+        "Name": "Mikrotik"
+      },
+      {
+        "Icon": "MdiIcon.Radar",
+        "Name": "Zabbix"
+      }
+    ],
+    "Points":
+    [
+      "Responsável pela manutenção, integração e operabilidade do serviço de internet",
+      "Atendimento a clientes",
+      "Gerência de clientes utilizando o IXCSoft",
+      "Controle de almoxarifado e fluxo de estoque"
+    ]
+  }
+]

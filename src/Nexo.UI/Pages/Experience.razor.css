@@ -1,0 +1,45 @@
+#pro
+{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+#proContainer
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.proCard
+{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border: 0.1rem solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--grid-color-card-background);
+}
+
+.proCard-right
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.proCard-right-tools
+{
+    display: flex;
+    gap: 0.2rem;
+}
+
+.tools-li
+{
+    background-color: var(--grid-color-background);
+    border: 0.1rem solid var(--border-color);
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.7rem;
+}

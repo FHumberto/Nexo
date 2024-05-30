@@ -1,0 +1,62 @@
+@page "/experience"
+@inject HttpClient Http
+
+<PageTitle>Experiência</PageTitle>
+
+<section id="pro">
+
+    <h2>Experiência</h2>
+
+    <div id="proContainer">
+
+        @if (_summary is null)
+        {
+            <p>Carregando...</p>
+        }
+        else
+        {
+            foreach (var summary in _summary)
+            {
+                <div class="proCard">
+                    <img src="@summary.Cover" alt="logo @summary.Title" />
+
+                    <div class="proCard-right">
+                        <i>@summary.StartDate - @(string.IsNullOrEmpty(summary.EndDate) ? "Atualmente" : summary.EndDate)</i>
+
+                        <h3 class="subSection">@summary.Title</h3>
+
+                        @if (summary.Tools is not null && summary.Tools.Count != 0)
+                        {
+                            <h4>Tecnologias e Ferramentas utilizadas:</h4>
+
+                            <ul class="proCard-right-tools">
+
+                                @foreach (var tool in summary.Tools)
+                                {
+                                    <li class="tools-li tooltip-container" data-tooltip="@tool.Name">
+                                        <IconComponent IconName="@tool.Icon" Size="icon-small" />
+                                    </li>
+                                }
+                            </ul>
+                        }
+
+                        <ul class="proCard-right-points">
+                            @if (summary.Points is not null)
+                            {
+                                @foreach (string point in summary.Points)
+                                {
+                                    <li>
+                                        <span>• @point</span>
+                                    </li>
+                                }
+                            }
+                        </ul>
+                    </div>
+                </div>
+            }
+        }
+
+    </div>
+
+</section>
+
