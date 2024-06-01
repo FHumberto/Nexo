@@ -20,8 +20,12 @@
     "Name": "JavaScript"
   },
   {
+    "Icon": "DeviconPlain.Dotnetcore",
+    "Name": "Dotnet Core"
+  },
+  {
     "Icon": "MdiIcon.DotNet",
-    "Name": ".NET"
+    "Name": "DotNet"
   },
   {
     "Icon": "DeviconLine.Blazor",
@@ -42,6 +46,22 @@
   {
     "Icon": "MdiIcon.Unity",
     "Name": "Unity"
+  },
+  {
+    "Icon": "MdiIcon.BlenderSoftware",
+    "Name": "Blender"
+  },
+  {
+    "Icon": "BootstrapIcon.Git",
+    "Name": "Git"
+  },
+  {
+    "Icon": "BootstrapIcon.BootstrapFill",
+    "Name": "Bootstrap"
+  },
+  {
+    "Icon": "MdiIcon.React",
+    "Name": "React"
   },
   {
     "Icon": "MdiIcon.BlenderSoftware",

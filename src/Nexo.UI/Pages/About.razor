@@ -1,0 +1,77 @@
+﻿@page "/about"
+@using Nexo.UI.Models.Summary
+@using Nexo.UI.Util
+@inject HttpClient Http
+
+<PageTitle>Sobre</PageTitle>
+
+<div id="about">
+
+    <section id="info">
+
+        <h2>Sobre Mim</h2>
+
+        <div id="infoContainer">
+
+            <img src="https://placehold.co/250x250" alt="profile-picture" />
+
+            <div id="infoContainer-right">
+                <p>
+                    Sou um profissional dedicado, apaixonado por tecnologia e com forte desejo de aprender e crescer na área de desenvolvimento de software.
+                    Sou bacharel em <strong>Ciências da Computação</strong> pela UERN e pós-graduado em <strong>Engenharia de Software</strong> pela Estácio.
+                    E estou me especializando em <strong>desenvolvimento de jogos digitais</strong>.
+                    Atuei no mercado de trabalho como um <strong>Analista de Redes</strong>, fiz uma transição de carreira para <strong>Engenharia de Software</strong>.
+                    E atualmente trabalho como <strong>desenvolvedor web full-stack</strong>.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="skills">
+        <h2>Habilidades</h2>
+
+        <div id="skillsContainer">
+            @if (_skills == null)
+            {
+                <p><em>Carregando...</em></p>
+            }
+            else
+            {
+                @foreach (var skill in _skills)
+                {
+                    <li class="skillCard" data-tooltip="@skill.Name">
+                        <IconComponent IconName="@skill.Icon" Size="icon-plus" />
+                        <span class="skillCard-name">@skill.Name</span>
+                    </li>
+                }
+            }
+        </div>
+
+        <ul id="legenda">
+            <li class="label">
+                <div id="lb-e" class="lb"></div>
+                <span>Especialização</span>
+            </li>
+            <li class="label">
+                <div id="lb-c" class="lb"></div>
+                <span>Confortável</span></li>
+            <li class="label">
+                <div id="lb-f" class="lb"></div>
+                <span>Familiar</span>
+            </li>
+        </ul>
+
+    </section>
+
+</div>
+
+@code {
+    private Tool[]? _skills;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _skills = await Http.FetchDataAsync<Tool[]>("request/skills.json");
+    }
+}
