@@ -7,10 +7,17 @@
 
 main
 {
-    flex: 1;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 article
 {
-    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    max-width: 1200px;
 }
