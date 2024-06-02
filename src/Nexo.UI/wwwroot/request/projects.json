@@ -1,0 +1,71 @@
+[
+  {
+    "Type": "Web",
+    "Cover": "https://raw.githubusercontent.com/FHumberto/PES-IN-CDC_CRUD/main/project/demo.gif",
+    "Name": "Catalogo de Cartas",
+    "Description": "Projeto interno de CRUD simples que faz a listagem, cadastro, leitura ou remo��o de cartas. Desenvolvido com o prop�sito de catalogar minhas cartas de magic � the gathering.",
+    "Tools":
+    [
+      {
+        "Icon": "DeviconPlain.Csharp",
+        "Name": "C#"
+      },
+      {
+        "Icon": "DeviconPlain.Javascript",
+        "Name": "JavaScript"
+      },
+      {
+        "Icon": "BootstrapIcon.BootstrapFill",
+        "Name": "Bootstrap"
+      },
+      {
+        "Icon": "DeviconPlain.Microsoftsqlserver",
+        "Name": "SQL Server"
+      },
+      {
+        "Icon": "DeviconPlain.Dotnetcore",
+        "Name": "Dotnet Core"
+      }
+    ],
+    "Source": "https://github.com/FHumberto/PES-IN-CDC_CRUD",
+    "Demo": ""
+  },
+  {
+    "Type": "Desktop",
+    "Cover": "https://placehold.co/300x300",
+    "Name": "Organizador de Arquivos",
+    "Description": "Projeto console que faz o agrupamento de arquivos semelhantes no diretório informado em diferentes categorias. Desenvolvido com o objetivo de suprir uma necessidade do autor do projeto",
+    "Tools":
+    [
+      {
+        "Icon": "DeviconPlain.Cpp",
+        "Name": "C#"
+      },
+      {
+        "Icon": "MdiIcon.DotNet",
+        "Name": "DotNet"
+      }
+    ],
+    "Source": "https://github.com/FHumberto/PES-PF-ODD/",
+    "Demo": ""
+  },
+  {
+    "Type": "GameDev",
+    "Cover": "https://placehold.co/300x300",
+    "Name": "Plataformer",
+    "Description": "Projeto de estudo referente a jogos de plataforma",
+    "Tools":
+    [
+      {
+        "Icon": "DeviconPlain.Cplusplus",
+        "Name": "C++"
+      },
+      {
+        "Icon": "MdiIcon.Unreal",
+        "Name": "Unreal Engine"
+      }
+    ],
+    "Source": "https://github.com/FHumberto/PES-PF-ODD/",
+    "Demo": ""
+  }
+]
