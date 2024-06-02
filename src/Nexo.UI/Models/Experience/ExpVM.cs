@@ -1,11 +1,9 @@
-﻿using Nexo.UI.Models.Summary;
+﻿using Nexo.UI.Models.Common;
 
-namespace Nexo.UI.Models;
+namespace Nexo.UI.Models.Experience;
 
-public class Exp
+public class ExpVM : BaseModel
 {
-    public string? Title { get; set; }
-    public string? Cover { get; set; }
     public string? StartDate { get; set; }
     public string? EndDate { get; set; }
     public List<Tool>? Tools { get; set; }

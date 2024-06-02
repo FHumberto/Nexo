@@ -1,12 +1,10 @@
-﻿using Nexo.UI.Models.Summary;
+﻿using Nexo.UI.Models.Common;
 
 namespace Nexo.UI.Models;
 
-public class ProjectVM
+public class ProjectVM : BaseModel
 {
     public string? Type { get; set; }
-    public string? Cover { get; set; }
-    public string? Name { get; set; }
     public string? Description { get; set; }
     public List<Tool>? Tools { get; set; }
     public string? Source { get; set; }

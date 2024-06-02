@@ -18,12 +18,12 @@
             foreach (var summary in _summary)
             {
                 <div class="proCard">
-                    <img src="@summary.Cover" alt="logo @summary.Title" />
+                    <img src="@summary.Cover" alt="logo @summary.Name" />
 
                     <div class="proCard-right">
                         <i>@summary.StartDate - @(string.IsNullOrEmpty(summary.EndDate) ? "Atualmente" : summary.EndDate)</i>
 
-                        <h3 class="subSection">@summary.Title</h3>
+                        <h3 class="subSection">@summary.Name</h3>
 
                         @if (summary.Tools is not null && summary.Tools.Count != 0)
                         {

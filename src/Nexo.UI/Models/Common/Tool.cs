@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace Nexo.UI.Models.Summary;
+namespace Nexo.UI.Models.Common;
 
 [DebuggerDisplay("Name = {Name}, Icon = {Icon}")]
 public class Tool

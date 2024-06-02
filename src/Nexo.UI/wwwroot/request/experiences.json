@@ -3,7 +3,7 @@
     "Cover": "https://placehold.co/150x250",
     "StartDate": "Mar/2023",
     "EndDate": "",
-    "Title": "Programador Full-Stack JR",
+    "Name": "Programador Full-Stack JR",
     "Institution": "GetInfo Soluções Corporativas",
     "Tools":
     [
@@ -53,7 +53,7 @@
     "Cover": "https://placehold.co/150x250",
     "StartDate": "Mar/2022",
     "EndDate": "Mai/2022",
-    "Title": "Desenvolvedor Full-Stack (Estágio)",
+    "Name": "Desenvolvedor Full-Stack (Estágio)",
     "Institution": "Sysdelta",
     "Tools":
     [
@@ -91,7 +91,7 @@
     "Cover": "https://placehold.co/150x250",
     "StartDate": "Jun/2018",
     "EndDate": "Fev/2021",
-    "Title": "Analista de Redes",
+    "Name": "Analista de Redes",
     "Institution": "Top Web Telecom",
     "Tools":
     [

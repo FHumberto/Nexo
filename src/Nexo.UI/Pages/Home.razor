@@ -44,10 +44,10 @@
                 foreach (var summary in _summary)
                 {
                     <div class="summaryCard">
-                        <img src="@summary.Cover" alt="@summary.Title" />
+                        <img src="@summary.Cover" alt="@summary.Name" />
 
                         <div class="summaryCard-right">
-                            <h3>@summary.Title</h3>
+                            <h3>@summary.Name</h3>
 
                             <ul class="summaryCard-right-tools">
                                 @if (summary.Tools is not null)
@@ -96,7 +96,7 @@
                 {
                     <div class="serviceCard">
 
-                        <h3>@service.Title</h3>
+                        <h3>@service.Name</h3>
 
                         <IconComponent IconName="@service.Icon" Size="icon-large" />
 
