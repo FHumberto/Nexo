@@ -1,6 +1,4 @@
 ﻿@page "/projects"
-@using Nexo.UI.Models
-@using Nexo.UI.Util
 @inject HttpClient Http
 
 <PageTitle>Projetos</PageTitle>
@@ -34,7 +32,7 @@
         </div>
     </div>
 
-    <ul id="projectsContainner">
+    <ul id="projectsContainer">
         @if (_projectsVMsToShow is null)
         {
             <p>Os dados não foram carregados corretamente, tente novamente mais tarde.</p>
@@ -92,41 +90,3 @@
     </ul>
 
 </section>
-
-@code
-{
-    private ProjectVM[]? _projectsVMs = Array.Empty<ProjectVM>();
-    private ProjectVM[]? _projectsVMsToShow = Array.Empty<ProjectVM>();
-
-    protected override async Task OnInitializedAsync()
-    {
-        _projectsVMs = await Http.FetchDataAsync<ProjectVM[]>("request/projects.json");
-        _projectsVMsToShow = _projectsVMs;
-    }
-
-    private void ShowAllProjects()
-    {
-        _projectsVMsToShow = _projectsVMs;
-    }
-
-    private void ShowWebProjects()
-    {
-        _projectsVMsToShow = (_projectsVMs?.Where(p => p.Type == "Web").ToArray()) ?? Array.Empty<ProjectVM>();
-    }
-
-    private void ShowDesktopProjects()
-    {
-        _projectsVMsToShow = (_projectsVMs?.Where(p => p.Type == "Desktop").ToArray()) ?? Array.Empty<ProjectVM>();
-    }
-
-
-    private void ShowGameDevProjects()
-    {
-        _projectsVMsToShow = (_projectsVMs?.Where(p => p.Type == "GameDev").ToArray()) ?? Array.Empty<ProjectVM>();
-    }
-
-    private void ShowInfraProjects()
-    {
-        _projectsVMsToShow = (_projectsVMs?.Where(p => p.Type == "Infra").ToArray()) ?? Array.Empty<ProjectVM>();
-    }
-}

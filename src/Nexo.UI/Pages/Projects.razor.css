@@ -4,6 +4,7 @@
     flex-direction: column;
     gap: 3rem;
     margin-top: 3rem;
+    text-align: center;
 }
 
 #projectsHeader
@@ -23,7 +24,7 @@
     transition: background-color 0.5s ease-in-out;
     cursor: pointer;
     border: none;
-    background-color: #ffffff00;
+    background-color: transparent;
     padding: 0.5rem;
     width: 6rem;
     text-align: center;
@@ -34,7 +35,7 @@
     background-color: var(--link-color);
 }
 
-#projectsContainner
+#projectsContainer
 {
     display: flex;
     flex-wrap: wrap;
@@ -102,7 +103,6 @@
 {
     opacity: 1;
 }
-
 
 .projectLinks
 {
