@@ -3,7 +3,7 @@
     "Type": "Web",
     "Cover": "https://raw.githubusercontent.com/FHumberto/PES-IN-CDC_CRUD/main/project/demo.gif",
     "Name": "Catalogo de Cartas",
-    "Description": "Projeto interno de CRUD simples que faz a listagem, cadastro, leitura ou remo��o de cartas. Desenvolvido com o prop�sito de catalogar minhas cartas de magic � the gathering.",
+    "Description": "Faz a listagem, cadastro, leitura e remoção de cartas. Projetado para catalogar minhas cartas de Magic: The Gathering.",
     "Tools":
     [
       {
@@ -32,13 +32,13 @@
   },
   {
     "Type": "Desktop",
-    "Cover": "https://placehold.co/300x300",
+    "Cover": "https://placehold.co/366x200",
     "Name": "Organizador de Arquivos",
-    "Description": "Projeto console que faz o agrupamento de arquivos semelhantes no diretório informado em diferentes categorias. Desenvolvido com o objetivo de suprir uma necessidade do autor do projeto",
+    "Description": "Agrupa arquivos semelhantes em diferentes categorias dentro do diretório esppecificado. Projetado para atender uma necessidade específica od autor",
     "Tools":
     [
       {
-        "Icon": "DeviconPlain.Cpp",
+        "Icon": "DeviconPlain.Csharp",
         "Name": "C#"
       },
       {
@@ -51,9 +51,9 @@
   },
   {
     "Type": "GameDev",
-    "Cover": "https://placehold.co/300x300",
+    "Cover": "https://placehold.co/366x200",
     "Name": "Plataformer",
-    "Description": "Projeto de estudo referente a jogos de plataforma",
+    "Description": "Projeto de estudo voltado para jogos de plataforma.",
     "Tools":
     [
       {
@@ -66,6 +66,6 @@
       }
     ],
     "Source": "https://github.com/FHumberto/PES-PF-ODD/",
-    "Demo": ""
+    "Demo": "https://teste"
   }
 ]

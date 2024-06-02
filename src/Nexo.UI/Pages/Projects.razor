@@ -9,30 +9,32 @@
 
     <h2>Projetos</h2>
 
-    <div>
-        <div>
-            <IconComponent IconName="MdiIcon.Apps" />
-            <button @onclick="ShowAllProjects">Todos</button>
-        </div>
-        <div>
-            <IconComponent IconName="BootstrapIcon.Globe" />
-            <button @onclick="ShowWebProjects">Web</button>
-        </div>
-        <div>
-            <IconComponent IconName="BootstrapIcon.WindowDesktop" />
-            <button @onclick="ShowDesktopProjects">Desktop</button>
-        </div>
-        <div>
-            <IconComponent IconName="BootstrapIcon.Joystick" />
-            <button @onclick="ShowGameDevProjects">GameDev</button>
-        </div>
-        <div>
-            <IconComponent IconName="BootstrapIcon.Serverk" />
-            <button @onclick="ShowInfraProjects">Infra</button>
+    <div id="projectsHeader">
+        <div id="projectsHeader-lb">
+            <button class="projectsHeader-btm" @onclick="ShowAllProjects">
+                <IconComponent IconName="MdiIcon.Apps" Size="icon-small" />
+                <span>Todos</span>
+            </button>
+            <button class="projectsHeader-btm" @onclick="ShowWebProjects">
+                <IconComponent IconName="BootstrapIcon.Globe" Size="icon-small" />
+                <span>Web</span>
+            </button>
+            <button class="projectsHeader-btm" @onclick="ShowDesktopProjects">
+                <IconComponent IconName="BootstrapIcon.WindowDesktop" Size="icon-small" />
+                <span>Desktop</span>
+            </button>
+            <button class="projectsHeader-btm" @onclick="ShowGameDevProjects">
+                <IconComponent IconName="BootstrapIcon.Joystick" Size="icon-small" />
+                <span>GameDev</span>
+            </button>
+            <button class="projectsHeader-btm" @onclick="ShowInfraProjects">
+                <IconComponent IconName="BootstrapIcon.Server" Size="icon-small" />
+                <span>Infra</span>
+            </button>
         </div>
     </div>
 
-    <ul>
+    <ul id="projectsContainner">
         @if (_projectsVMsToShow is null)
         {
             <p>Os dados não foram carregados corretamente, tente novamente mais tarde.</p>
@@ -47,21 +49,41 @@
             {
                 <li class="projectCard">
                     <h3>@project.Name</h3>
-                    <img src="@project.Cover">
+                    <img class="projectCard-cover" src="@project.Cover" />
 
                     <p>@project.Description</p>
 
                     @if (project.Tools is not null && project.Tools.Count != 0)
                     {
-                        <ul>
+                        <ul class="projectCard-tools">
 
                             @foreach (var tool in project.Tools)
                             {
-                                <li data-tooltip="@tool.Name">
-                                    <IconComponent IconName="@tool.Icon" Size="icon-small" />
+                                <li class="projectCard-tools-li">
+                                    <IconComponent IconName="@tool.Icon" Size="icon-medium" />
                                 </li>
                             }
                         </ul>
+                    }
+
+                    @if (!string.IsNullOrEmpty(project.Source) || !string.IsNullOrEmpty(project.Demo))
+                    {
+                        <div class="projectLinks">
+                            @if (!string.IsNullOrEmpty(project.Demo))
+                            {
+                                <a class="projectLinks-src" href="@project.Demo" target="_blank">
+                                    <IconComponent IconName="BootstrapIcon.Link45deg" Size="icon-medium" />
+                                    <spam>Demo</spam>
+                                </a>
+                            }
+                            @if (!string.IsNullOrEmpty(project.Source))
+                            {
+                                <a class="projectLinks-src" href="@project.Source" target="_blank">
+                                    <IconComponent IconName="BootstrapIcon.Github" Size="icon-medium" />
+                                    <spam>Source</spam>
+                                </a>
+                            }
+                        </div>
                     }
                 </li>
             }
@@ -70,7 +92,6 @@
     </ul>
 
 </section>
-
 
 @code
 {
