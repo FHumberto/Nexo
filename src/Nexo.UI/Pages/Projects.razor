@@ -1,0 +1,111 @@
+﻿@page "/projects"
+@using Nexo.UI.Models
+@using Nexo.UI.Util
+@inject HttpClient Http
+
+<PageTitle>Projetos</PageTitle>
+
+<section id="projects">
+
+    <h2>Projetos</h2>
+
+    <div>
+        <div>
+            <IconComponent IconName="MdiIcon.Apps" />
+            <button @onclick="ShowAllProjects">Todos</button>
+        </div>
+        <div>
+            <IconComponent IconName="BootstrapIcon.Globe" />
+            <button @onclick="ShowWebProjects">Web</button>
+        </div>
+        <div>
+            <IconComponent IconName="BootstrapIcon.WindowDesktop" />
+            <button @onclick="ShowDesktopProjects">Desktop</button>
+        </div>
+        <div>
+            <IconComponent IconName="BootstrapIcon.Joystick" />
+            <button @onclick="ShowGameDevProjects">GameDev</button>
+        </div>
+        <div>
+            <IconComponent IconName="BootstrapIcon.Serverk" />
+            <button @onclick="ShowInfraProjects">Infra</button>
+        </div>
+    </div>
+
+    <ul>
+        @if (_projectsVMsToShow is null)
+        {
+            <p>Os dados não foram carregados corretamente, tente novamente mais tarde.</p>
+        }
+        else if (!_projectsVMsToShow.Any())
+        {
+            <p>Nenhum projeto a ser exibido nesta categoria</p>
+        }
+        else
+        {
+            @foreach (var project in _projectsVMsToShow)
+            {
+                <li class="projectCard">
+                    <h3>@project.Name</h3>
+                    <img src="@project.Cover">
+
+                    <p>@project.Description</p>
+
+                    @if (project.Tools is not null && project.Tools.Count != 0)
+                    {
+                        <ul>
+
+                            @foreach (var tool in project.Tools)
+                            {
+                                <li data-tooltip="@tool.Name">
+                                    <IconComponent IconName="@tool.Icon" Size="icon-small" />
+                                </li>
+                            }
+                        </ul>
+                    }
+                </li>
+            }
+        }
+
+    </ul>
+
+</section>
+
+
+@code
+{
+    private ProjectVM[]? _projectsVMs = Array.Empty<ProjectVM>();
+    private ProjectVM[]? _projectsVMsToShow = Array.Empty<ProjectVM>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        _projectsVMs = await Http.FetchDataAsync<ProjectVM[]>("request/projects.json");
+        _projectsVMsToShow = _projectsVMs;
+    }
+
+    private void ShowAllProjects()
+    {
+        _projectsVMsToShow = _projectsVMs;
+    }
+
+    private void ShowWebProjects()
+    {
+        _projectsVMsToShow = (_projectsVMs?.Where(p => p.Type == "Web").ToArray()) ?? Array.Empty<ProjectVM>();
+    }
+
+    private void ShowDesktopProjects()
+    {
+        _projectsVMsToShow = (_projectsVMs?.Where(p => p.Type == "Desktop").ToArray()) ?? Array.Empty<ProjectVM>();
+    }
+
+
+    private void ShowGameDevProjects()
+    {
+        _projectsVMsToShow = (_projectsVMs?.Where(p => p.Type == "GameDev").ToArray()) ?? Array.Empty<ProjectVM>();
+    }
+
+    private void ShowInfraProjects()
+    {
+        _projectsVMsToShow = (_projectsVMs?.Where(p => p.Type == "Infra").ToArray()) ?? Array.Empty<ProjectVM>();
+    }
+}
