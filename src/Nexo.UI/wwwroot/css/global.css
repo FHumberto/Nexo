@@ -72,6 +72,11 @@ p, i, span
     font-size: 0.95rem;
 }
 
+p
+{
+    text-align: justify;
+}
+
 .subSection
 {
     color: var(--strong-color)
@@ -81,6 +86,7 @@ p, i, span
 {
     position: relative;
     display: inline-block;
+    position: relative;
     cursor: pointer;
     font-size: 0.8rem;
 }
@@ -92,10 +98,15 @@ p, i, span
         top: 100%;
         left: 50%;
         transform: translateX(-50%);
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+        border-radius: 5px;
         background-color: #333;
         color: #fff;
         padding: 5px 10px;
-        border-radius: 5px;
+        content: attr(data-tooltip);
+        color: #fff;
         white-space: nowrap;
         opacity: 0;
         visibility: hidden;
@@ -105,5 +116,14 @@ p, i, span
     .tooltip-container:hover::before
     {
         opacity: 0.9;
-        visibility: visible;
+    }
+
+
+.section
+{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 3rem;
+    text-align: center;
     }
