@@ -1,11 +1,3 @@
-#pro
-{
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    margin-top: 3rem;
-}
-
 #proContainer
 {
     display: flex;
@@ -33,6 +25,7 @@
 .proCard-right-tools
 {
     display: flex;
+    flex-wrap: wrap;
     gap: 0.2rem;
 }
 
@@ -42,4 +35,19 @@
     border: 0.1rem solid var(--border-color);
     border-radius: 0.25rem;
     padding: 0.25rem 0.7rem;
+}
+
+@media screen and (max-width: 720px)
+{
+    .proCard
+    {
+        flex-direction: column;
+    }
+
+    .proCard-left
+    {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
 }

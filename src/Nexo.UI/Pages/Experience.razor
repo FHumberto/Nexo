@@ -3,7 +3,7 @@
 
 <PageTitle>Experiência</PageTitle>
 
-<section id="pro">
+<section class="section">
 
     <h2>Experiência</h2>
 
@@ -18,10 +18,11 @@
             foreach (var summary in _summary)
             {
                 <div class="proCard">
-                    <img src="@summary.Cover" alt="logo @summary.Name" />
+                    <img class="proCard-left" src="@summary.Cover" alt="logo @summary.Name" />
 
                     <div class="proCard-right">
                         <i>@summary.StartDate - @(string.IsNullOrEmpty(summary.EndDate) ? "Atualmente" : summary.EndDate)</i>
+                        <h3>@summary.Institution</h3>
 
                         <h3 class="subSection">@summary.Name</h3>
 
