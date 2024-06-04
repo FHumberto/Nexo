@@ -1,11 +1,3 @@
-#home
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10rem;
-}
-
 #lead
 {
     display: flex;
@@ -157,7 +149,6 @@
 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 1000px;
     gap: 3rem;
 }
 
@@ -189,7 +180,6 @@
     text-align: center;
 }
 
-
 .contact-icon:hover,
 .tools-li:hover,
 .points-li:hover,
@@ -197,4 +187,18 @@
 {
     transition: 0.7s;
     background-color: var(--link-color);
+}
+
+
+@media screen and (max-width: 870px)
+{
+    .summaryCard
+    {
+        flex-direction: column;
+    }
+
+    #servicesContainer
+    {
+        grid-template-columns: 1fr;
+    }
 }

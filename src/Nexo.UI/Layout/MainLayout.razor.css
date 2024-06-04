@@ -21,3 +21,11 @@ article
     gap: 5rem;
     max-width: 1300px;
 }
+
+@media screen and (max-width: 480px)
+{
+    main
+    {
+        padding: 4rem 0 4rem 0;
+    }
+}

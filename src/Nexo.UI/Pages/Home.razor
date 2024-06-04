@@ -3,110 +3,106 @@
 
 <PageTitle>Home</PageTitle>
 
-<div id="home">
+<section id="lead">
+    <div>
+        <h3 class="lead-tittle-sec">Olá, meu nome é</h3>
+        <h1 class="lead-tittle-pri">Humberto Guedes</h1>
+        <h3 class="lead-tittle-sec">Sou um engenheiro de software</h3>
+    </div>
 
-    <section id="lead">
-        <div>
-            <h3 class="lead-tittle-sec">Olá, meu nome é</h3>
-            <h1 class="lead-tittle-pri">Humberto Guedes</h1>
-            <h3 class="lead-tittle-sec">Sou um engenheiro de software</h3>
-        </div>
+    <div class="lead-contact">
+        <a class="contact-icon " href="mailto:fhumberto.trab@hotmail.com" title="Email">
+            <IconComponent IconName="BootstrapIcon.EnvelopeFill" Size="icon-small" />
+        </a>
+        <a class="contact-icon" href="https://www.linkedin.com/in/fhumberto" title="LinkedIn" target=" _blank">
+            <IconComponent IconName="DeviconPlain.Linkedin" Size="icon-small" />
+        </a>
+        <a class="contact-icon" href="https://github.com/FHumberto" title="GithubProfile" target="_blank">
+            <IconComponent IconName="BootstrapIcon.Github" Size="icon-small" />
+        </a>
+        <a class="contact-icon" href="https://github.com/FHumberto/FHumberto/raw/main/src/doc/Curriculo.pdf"
+           title="CurriculumVitae" target="_blank">
+            <IconComponent IconName="BootstrapIcon.PersonBadge" Size="icon-small" />
+        </a>
+    </div>
+</section>
 
-        <div class="lead-contact">
-            <a class="contact-icon " href="mailto:fhumberto.trab@hotmail.com" title="Email">
-                <IconComponent IconName="BootstrapIcon.EnvelopeFill" Size="icon-small" />
-            </a>
-            <a class="contact-icon" href="https://www.linkedin.com/in/fhumberto" title="LinkedIn" target=" _blank">
-                <IconComponent IconName="DeviconPlain.Linkedin" Size="icon-small" />
-            </a>
-            <a class="contact-icon" href="https://github.com/FHumberto" title="GithubProfile" target="_blank">
-                <IconComponent IconName="BootstrapIcon.Github" Size="icon-small" />
-            </a>
-            <a class="contact-icon" href="https://github.com/FHumberto/FHumberto/raw/main/src/doc/Curriculo.pdf"
-               title="CurriculumVitae" target="_blank">
-                <IconComponent IconName="BootstrapIcon.PersonBadge" Size="icon-small" />
-            </a>
-        </div>
-    </section>
+<section id="summary">
+    <div>
+        <h2>O que eu faço?</h2>
+    </div>
 
-    <section id="summary">
-        <div>
-            <h2>O que eu faço?</h2>
-        </div>
-
-        <div id="summaryContainer">
-            @if (_summary is null)
+    <div id="summaryContainer">
+        @if (_summary is null)
+        {
+            <p>Carregando...</p>
+        }
+        else
+        {
+            foreach (var summary in _summary)
             {
-                <p>Carregando...</p>
-            }
-            else
-            {
-                foreach (var summary in _summary)
-                {
-                    <div class="summaryCard">
-                        <img src="@summary.Cover" alt="@summary.Name" />
+                <div class="summaryCard">
+                    <img src="@summary.Cover" alt="@summary.Name" />
 
-                        <div class="summaryCard-right">
-                            <h3>@summary.Name</h3>
+                    <div class="summaryCard-right">
+                        <h3>@summary.Name</h3>
 
-                            <ul class="summaryCard-right-tools">
-                                @if (summary.Tools is not null)
+                        <ul class="summaryCard-right-tools">
+                            @if (summary.Tools is not null)
+                            {
+                                @foreach (var tools in summary.Tools)
                                 {
-                                    @foreach (var tools in summary.Tools)
-                                    {
-                                        <li class="tools-li" title="@tools.Name">
-                                            <IconComponent IconName="@tools.Icon" Size="icon-small" />
-                                        </li>
-                                    }
+                                    <li class="tools-li" title="@tools.Name">
+                                        <IconComponent IconName="@tools.Icon" Size="icon-small" />
+                                    </li>
                                 }
-                            </ul>
+                            }
+                        </ul>
 
-                            <ul class="summaryCard-right-points">
-                                @if (summary.Points is not null)
+                        <ul class="summaryCard-right-points">
+                            @if (summary.Points is not null)
+                            {
+                                @foreach (string point in summary.Points)
                                 {
-                                    @foreach (string point in summary.Points)
-                                    {
-                                        <li class="points-li">
-                                            <IconComponent IconName="BootstrapIcon.Check2Square" Size="icon-small" />
-                                            <span>@point</span>
-                                        </li>
-                                    }
+                                    <li class="points-li">
+                                        <IconComponent IconName="BootstrapIcon.Check2Square" Size="icon-small" />
+                                        <span>@point</span>
+                                    </li>
                                 }
-                            </ul>
-                        </div>
+                            }
+                        </ul>
                     </div>
-                }
+                </div>
             }
-        </div>
-    </section>
+        }
+    </div>
+</section>
 
-    <section id="services">
-        <div>
-            <h2>Meus Serviços</h2>
-        </div>
+<section id="services">
+    <div>
+        <h2>Meus Serviços</h2>
+    </div>
 
-        <div id="servicesContainer">
-            @if (_services is null)
+    <div id="servicesContainer">
+        @if (_services is null)
+        {
+            <p>Carregando...</p>
+        }
+        else
+        {
+            foreach (var service in _services)
             {
-                <p>Carregando...</p>
-            }
-            else
-            {
-                foreach (var service in _services)
-                {
-                    <div class="serviceCard">
+                <div class="serviceCard">
 
-                        <h3>@service.Name</h3>
+                    <h3>@service.Name</h3>
 
-                        <IconComponent IconName="@service.Icon" Size="icon-large" />
+                    <IconComponent IconName="@service.Icon" Size="icon-large" />
 
-                        <div class="serviceCard-body">
-                            <p>@service.Body</p>
-                        </div>
+                    <div class="serviceCard-body">
+                        <p>@service.Body</p>
                     </div>
-                }
+                </div>
             }
-        </div>
-    </section>
-
-</div>
+        }
+    </div>
+</section>

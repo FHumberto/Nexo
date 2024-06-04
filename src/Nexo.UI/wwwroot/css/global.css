@@ -84,7 +84,6 @@ p
 
 .tooltip-container
 {
-    position: relative;
     display: inline-block;
     position: relative;
     cursor: pointer;
@@ -93,7 +92,6 @@ p
 
     .tooltip-container::before
     {
-        content: attr(data-tooltip);
         position: absolute;
         top: 100%;
         left: 50%;
@@ -103,18 +101,15 @@ p
         transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
         border-radius: 5px;
         background-color: #333;
-        color: #fff;
         padding: 5px 10px;
         content: attr(data-tooltip);
         color: #fff;
         white-space: nowrap;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
     }
 
     .tooltip-container:hover::before
     {
+        visibility: visible;
         opacity: 0.9;
     }
 
