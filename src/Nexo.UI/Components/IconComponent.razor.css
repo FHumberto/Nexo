@@ -22,3 +22,8 @@
 {
     font-size: clamp(6rem, 8vw, 8rem);
 }
+
+.icon-e-medium
+{
+    font-size: 2rem;
+}
