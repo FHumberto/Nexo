@@ -52,7 +52,13 @@
     border-radius: 0.25rem;
     background-color: var(--grid-color-background);
     padding: 0.25rem 0.7rem;
+    transition: var(--transition-fadeInOut-color);
 }
+
+    .skillCard:hover
+    {
+        background-color: var(--link-color);
+    }
 
 .skillCard-name
 {

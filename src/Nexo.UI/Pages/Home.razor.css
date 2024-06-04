@@ -180,15 +180,22 @@
     text-align: center;
 }
 
+
+.contact-icon,
+.tools-li,
+.points-li,
+.serviceCard
+{
+    transition: var(--transition-fadeInOut-color);
+}
+
 .contact-icon:hover,
 .tools-li:hover,
 .points-li:hover,
 .serviceCard:hover
 {
-    transition: 0.7s;
     background-color: var(--link-color);
 }
-
 
 @media screen and (max-width: 870px)
 {

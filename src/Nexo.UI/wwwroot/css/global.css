@@ -15,6 +15,8 @@
     --grid-color-card-background: rgb(38, 38, 38);
     --border-color: rgb(0, 0, 0);
     --border-radius: 0.5rem;
+    --transition-fadeInOut: opacity 0.5s ease-in-out;
+    --transition-fadeInOut-color: background-color 0.5s ease-in-out;
 }
 
 *
@@ -121,4 +123,15 @@ p
     gap: 3rem;
     margin-top: 3rem;
     text-align: center;
+    }
+
+.fade-in
+{
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+    .fade-in.visible
+    {
+        opacity: 1;
     }
