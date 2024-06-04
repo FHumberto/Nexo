@@ -3,7 +3,7 @@
 
 <PageTitle>Formação</PageTitle>
 
-<div id="education">
+<div class="section">
 
     <section id="title">
 
@@ -12,25 +12,25 @@
         <div id="titleContainer">
             @if (_titles == null)
             {
-                <p><em>Carregando...</em></p>
-            } 
+                    <p><em>Carregando...</em></p>
+            }
             else
             {
                 @foreach (var title in _titles)
                 {
-                    <a href="@title.Link" target="_blank">
-                        <div class="titleContainer-card">
-                            <img src="@title.Cover" alt="Logo @title.Acronym" title="Logo @title.Acronym">
+                            <a href="@title.Link" target="_blank">
+                                <div class="titleContainer-card">
+                                    <img class="titleContainer-l" src="@title.Cover" alt="Logo @title.Acronym" title="Logo @title.Acronym">
 
-                            <div class="titleContainer-r">
-                                <div class="titleContainer-r-header">
-                                    <h3>@title.Name</h3>
-                                    <i><b>@title.Acronym</b> - @title.Institution</i>
+                                    <div class="titleContainer-r">
+                                        <div class="titleContainer-r-header">
+                                            <h3>@title.Name</h3>
+                                            <i><b>@title.Acronym</b> - @title.Institution</i>
+                                        </div>
+                                        <p>@title.Description</p>
+                                    </div>
                                 </div>
-                                <p>@title.Description</p>
-                            </div>
-                        </div>
-                    </a>
+                            </a>
                 }
             }
         </div>
@@ -43,20 +43,19 @@
         <div id="certsContainer">
             @if (_certs == null)
             {
-                <p><em>Carregando...</em></p>
+                    <p><em>Carregando...</em></p>
             }
             else
             {
                 @foreach (var cert in _certs)
                 {
-                    <a class="certCard" href="@cert.Link" target="_blank">
-                        <img class="certCard-cover" src="@cert.Cover" alt="Logo @cert.Name" title="Logo @cert.Name" />
-                        <span>@cert.Name</span>
-                    </a>
+                            <a class="certCard" href="@cert.Link" target="_blank">
+                                <img class="certCard-cover" src="@cert.Cover" alt="Logo @cert.Name" title="Logo @cert.Name" />
+                                <span>@cert.Name</span>
+                            </a>
                 }
             }
         </div>
     </section>
 
 </div>
-
