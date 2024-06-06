@@ -1,11 +1,17 @@
-﻿:root
+﻿@font-face
 {
-    --font-monospace: JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    font-family: 'JetBrains Mono';
+    src: url('../font/JetBrainsMono-Medium.ttf') format('truetype');
+}
+
+:root
+{
     --body-background: rgb(31, 29, 29);
     --topbar-background: rgba(0, 0, 0, 0.4);
     --topbar-background-sec: rgb(51, 51, 51);
     --button-color-background: rgba(255, 255, 255, 0.1);
     --button-color-border: rgba(255, 255, 255, 0.1);
+    --button-color-background-t: rgba(0, 0, 0, 0.4);
     --text-color: rgb(255, 255, 255);
     --text-color-sec: rgb(0, 0, 0);
     --link-color: rgb(148, 14, 40);
@@ -23,11 +29,11 @@
 {
     box-sizing: border-box;
     margin: 0;
-    outline: none;
     padding: 0;
-    color: rgb(255, 255, 255);
-    font-family: JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-    list-style-type: none;
+    outline: none;
+    color: var(--text-color);
+    font-family: 'JetBrains Mono', sans-serif;
+    list-style: none;
     text-decoration: none;
 }
 
@@ -37,21 +43,20 @@ body
     line-height: 1.3;
 }
 
-
 a
 {
     color: var(--text-color);
+    transition: color 0.5s;
 }
 
     a:hover
     {
-        transition: 0.5s;
         color: var(--link-color);
     }
 
 strong
 {
-    color: var(--strong-color)
+    color: var(--strong-color);
 }
 
 img
@@ -81,7 +86,7 @@ p
 
 .subSection
 {
-    color: var(--strong-color)
+    color: var(--strong-color);
 }
 
 .tooltip-container
@@ -115,7 +120,6 @@ p
         opacity: 0.9;
     }
 
-
 .section
 {
     display: flex;
@@ -123,7 +127,7 @@ p
     gap: 3rem;
     margin-top: 3rem;
     text-align: center;
-    }
+}
 
 .fade-in
 {
@@ -135,3 +139,18 @@ p
     {
         opacity: 1;
     }
+
+input, textarea
+{
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s;
+    color: black;
+}
+
+select, option
+{
+    color: black;
+}
