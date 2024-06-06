@@ -161,17 +161,38 @@ p
         opacity: 1;
     }
 
-input, textarea
+.validation-errors
 {
-    padding: 10px;
-    border-radius: 15px;
-    border: 1px solid #ccc;
-    outline: none;
-    transition: border-color 0.3s;
-    color: black;
+    margin-bottom: 1rem;
+    border: 0.1rem solid red;
+    background: #4503104f;
+    padding: 1rem;
+    border-radius: 0.2rem;
 }
 
-select, option
+form
 {
-    color: black;
+    width: 100%;
+}
+
+input, textarea, select, option
+{
+    color: white;
+    background: #222222;
+    border: none;
+}
+
+.inputField
+{
+    display: block;
+    width: 100%;
+    line-height: 1.25rem;
+    padding: 0.2rem;
+}
+
+.textArea
+{
+    margin-top: 1rem;
+    resize: none;
+    height: 10rem;
 }

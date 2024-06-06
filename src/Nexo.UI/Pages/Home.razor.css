@@ -7,7 +7,8 @@
 }
 
 #summary,
-#services
+#services,
+#contact
 {
     display: flex;
     flex-direction: column;
@@ -180,22 +181,77 @@
     text-align: center;
 }
 
+#contactContainer
+{
+    display: flex;
+    width: 100%;
+}
+
+.form
+{
+    display: flex;
+    flex-direction: column;
+    border: 0.1rem solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--grid-color-card-background);
+    padding: 2rem;
+}
+
+    .form li
+    {
+        display: block;
+        padding: 9px;
+        border: 1px solid #DDDDDD;
+        margin-bottom: 30px;
+        border-radius: 3px;
+    }
+
+        .form li:last-child
+        {
+            border: none;
+            margin-bottom: 0px;
+            text-align: center;
+        }
+
+        .form li > label
+        {
+            float: left;
+            margin-top: -19px;
+            background: var(--grid-color-card-background);
+            padding: 2px 5px 2px 5px;
+        }
+
+
+.submitButton
+{
+    background-color: darkslategray;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    border-radius: 3px;
+    color: #D2E2FF;
+}
+
+    .submitButton:hover
+    {
+        background-color: var(--link-color);
+    }
 
 .contact-icon,
 .tools-li,
 .points-li,
-.serviceCard
+.serviceCard,
+.submitButton
 {
     transition: var(--transition-fadeInOut-color);
 }
 
-.contact-icon:hover,
-.tools-li:hover,
-.points-li:hover,
-.serviceCard:hover
-{
-    background-color: var(--link-color);
-}
+    .contact-icon:hover,
+    .tools-li:hover,
+    .points-li:hover,
+    .serviceCard:hover
+    {
+        background-color: var(--link-color);
+    }
 
 @media screen and (max-width: 870px)
 {

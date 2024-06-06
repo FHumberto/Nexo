@@ -7,10 +7,17 @@ public partial class Home
 {
     private SummaryVM[]? _summary;
     private ServiceVM[]? _services;
+    private ContactVM _contact = new();
 
     protected override async Task OnInitializedAsync()
     {
         _summary = await Http.FetchDataAsync<SummaryVM[]>("request/summaries.json");
         _services = await Http.FetchDataAsync<ServiceVM[]>("request/services.json");
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        Console.WriteLine("Funcionou!");
+        await Task.CompletedTask;
     }
 }
