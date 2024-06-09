@@ -15,6 +15,11 @@
     padding: 2rem;
 }
 
+#infoContainer-left
+{
+    height: 300px;
+}
+
 #infoContainer-right
 {
     align-content: center;

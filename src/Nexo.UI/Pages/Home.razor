@@ -111,42 +111,24 @@
     </div>
 
     <div id="contactContainer">
-
-        <EditForm Model="_contact" OnValidSubmit="HandleValidSubmit">
-
-            <ul class="form">
-
-                <DataAnnotationsValidator />
-                <ValidationSummary />
-
-                <li>
-                    <label for="name">Nome:</label>
-                    <InputText class="inputField" id="name" @bind-Value="_contact.Name" />
-                </li>
-
-                <li>
-                    <label class="formLabel" for="email">Email:</label>
-                    <InputText class="inputField" id="email" @bind-Value="_contact.Email" />
-                </li>
-
-                <li>
-                    <label for="subject">Estou interessado em:</label>
-                    <InputSelect class="inputField" @bind-Value="_contact.Subject">
-                        <option value="">-- Selecione --</option>
-                        <option value="Contratar">Contratar</option>
-                        <option value="Freelance">Freelance</option>
-                        <option value="Outro">Outro</option>
-                    </InputSelect>
-                </li>
-
-                <li>
-                    <label for="message">Mensagem:</label>
-                    <InputTextArea class="inputField textArea" id="message" @bind-Value="_contact.Body" />
-                </li>
-
-                <button type="submit" class="submitButton">Enviar</button>
-            </ul>
-        </EditForm>
+        <a class="contact-icon" href="https://www.linkedin.com/in/fhumberto" title="LinkedIn" target=" _blank">
+            <IconComponent IconName="DeviconPlain.Linkedin" Size="icon-medium" />
+            <span>Linkedin</span>
+        </a>
+        <a class="contact-icon" href="https://github.com/FHumberto" title="GithubProfile" target="_blank">
+            <IconComponent IconName="BootstrapIcon.Github" Size="icon-medium" />
+            <span>GitHub</span>
+        </a>
+        <a class="contact-icon" href="https://github.com/FHumberto/FHumberto/raw/main/src/doc/Curriculo.pdf"
+           title="CurriculumVitae" target="_blank">
+            <IconComponent IconName="BootstrapIcon.PersonBadge" Size="icon-medium" />
+            <span>Currículo</span>
+        </a>
+        <a class="contact-icon" href="mailto:fhumberto.trab@hotmail.com"
+           title="E-Mail">
+            <IconComponent IconName="MdiIcon.Email" Size="icon-medium" />
+            <span>E-Mail</span>
+        </a>
     </div>
 
 </section>

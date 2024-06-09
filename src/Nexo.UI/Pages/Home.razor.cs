@@ -7,17 +7,12 @@ public partial class Home
 {
     private SummaryVM[]? _summary;
     private ServiceVM[]? _services;
-    private ContactVM _contact = new();
 
     protected override async Task OnInitializedAsync()
     {
-        _summary = await Http.FetchDataAsync<SummaryVM[]>("request/summaries.json");
-        _services = await Http.FetchDataAsync<ServiceVM[]>("request/services.json");
-    }
-
-    private async Task HandleValidSubmit()
-    {
-        Console.WriteLine("Funcionou!");
-        await Task.CompletedTask;
+        _summary = await Http.FetchDataAsync<SummaryVM[]>(
+            "https://raw.githubusercontent.com/FHumberto/FHumberto/main/src/data/home/summaries.json");
+        _services = await Http.FetchDataAsync<ServiceVM[]>(
+            "https://raw.githubusercontent.com/FHumberto/FHumberto/main/src/data/home/services.json");
     }
 }
