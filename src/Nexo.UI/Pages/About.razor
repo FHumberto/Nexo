@@ -58,6 +58,6 @@
 
     protected override async Task OnInitializedAsync()
     {
-        _skills = await Http.FetchDataAsync<Tool[]>("request/skills.json");
+        _skills = await Http.FetchDataAsync<Tool[]>("https://raw.githubusercontent.com/FHumberto/FHumberto/main/src/data/skills.json");
     }
 }
