@@ -1,7 +1,7 @@
 ﻿@font-face
 {
-    font-family: 'JetBrains Mono';
     src: url('../font/JetBrainsMono-Medium.ttf') format('truetype');
+    font-family: 'JetBrains Mono';
 }
 
 :root
@@ -29,14 +29,14 @@
 {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
     outline: none;
+    padding: 0;
+    scrollbar-color: rgb(82, 22, 22) rgb(255, 255, 255, 0.50);
+    scrollbar-width: thin;
     color: var(--text-color);
     font-family: 'JetBrains Mono', sans-serif;
     list-style: none;
     text-decoration: none;
-    scrollbar-width: thin;
-    scrollbar-color: rgb(82, 22, 22) rgb(255, 255, 255, 0.50);
 }
 
     /* chrome */
@@ -52,9 +52,9 @@
 
     *::-webkit-scrollbar-thumb
     {
-        background-color: rgb(82, 22, 22);
-        border-radius: 20px;
         border: 3px solid rgb(255, 255, 255, 0.50);
+        border-radius: 20px;
+        background-color: rgb(82, 22, 22);
     }
 
 
@@ -66,8 +66,8 @@ body
 
 a
 {
-    color: var(--text-color);
     transition: color 0.5s;
+    color: var(--text-color);
 }
 
     a:hover
@@ -87,6 +87,7 @@ img
 
 h2
 {
+    color: var(--strong-color);
     font-size: clamp(1.5rem, 3.5vw, 2rem);
 }
 
@@ -95,7 +96,9 @@ h3
     font-size: clamp(1.2rem, 3.5vw, 1.5rem);
 }
 
-p, i, span
+p,
+i,
+span
 {
     font-size: 0.95rem;
 }
@@ -165,9 +168,9 @@ p
 {
     margin-bottom: 1rem;
     border: 0.1rem solid red;
+    border-radius: 0.2rem;
     background: #4503104f;
     padding: 1rem;
-    border-radius: 0.2rem;
 }
 
 form
@@ -175,24 +178,27 @@ form
     width: 100%;
 }
 
-input, textarea, select, option
+input,
+textarea,
+select,
+option
 {
-    color: white;
-    background: #222222;
     border: none;
+    background: #222222;
+    color: white;
 }
 
 .inputField
 {
     display: block;
+    padding: 0.2rem;
     width: 100%;
     line-height: 1.25rem;
-    padding: 0.2rem;
 }
 
 .textArea
 {
     margin-top: 1rem;
-    resize: none;
     height: 10rem;
+    resize: none;
 }

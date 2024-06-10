@@ -39,25 +39,25 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    padding: 1rem;
     border: 0.1rem solid var(--border-color);
     border-radius: var(--border-radius);
     background-color: var(--grid-color-card-background);
+    padding: 1rem;
 }
 
 .skillCard
 {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    width: max-content;
+    align-items: center;
     gap: 0.1rem;
+    transition: var(--transition-fadeInOut-color);
     border: 0.1rem solid var(--border-color);
     border-radius: 0.25rem;
     background-color: var(--grid-color-background);
     padding: 0.25rem 0.7rem;
-    transition: var(--transition-fadeInOut-color);
+    width: max-content;
 }
 
     .skillCard:hover
