@@ -13,7 +13,7 @@
 </p>
 
 <div align="center">
-  <img alt="Cover" src="about/cover_600x400.svg">
+  <img alt="Cover" src="about/demo.gif">
 </div>
 
 ## **Sobre**
