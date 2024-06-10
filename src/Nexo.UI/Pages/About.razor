@@ -13,15 +13,16 @@
 
         <div id="infoContainer">
 
-            <img id="infoContainer-left" src="https://avatars.githubusercontent.com/u/7258900?v=4" alt="profile-picture" />
+            <img id="infoContainer-left" src="https://avatars.githubusercontent.com/u/7258900?v=4"
+                alt="profile-picture" />
 
             <div id="infoContainer-right">
                 <p>
-                    Sou um profissional dedicado, apaixonado por tecnologia e com forte desejo de aprender e crescer na área de desenvolvimento de software.
-                    Sou bacharel em <strong>Ciências da Computação</strong> pela UERN e pós-graduado em <strong>Engenharia de Software</strong> pela Estácio.
-                    E estou me especializando em <strong>desenvolvimento de jogos digitais</strong>.
-                    Atuei no mercado de trabalho como um <strong>Analista de Redes</strong>, fiz uma transição de carreira para <strong>Engenharia de Software</strong>.
-                    E atualmente trabalho como <strong>desenvolvedor web full-stack</strong>.
+                    Sou um profissional dedicado, apaixonado por tecnologia e com forte desejo de aprender e crescer na
+                    área de desenvolvimento de software.
+                    Sou bacharel em <strong>Ciências da Computação</strong> pela UERN e pós-graduado em
+                    <strong>Engenharia de Software</strong> pela Estácio.
+                    E atualmente estou me especializando em <strong>desenvolvimento de jogos digitais</strong>.
                 </p>
             </div>
 
@@ -42,7 +43,7 @@
                 @foreach (var skill in _skills)
                 {
                     <li class="skillCard" data-tooltip="@skill.Name">
-                        <IconComponent IconName="@skill.Icon" Size="icon-plus" />
+                        <IconComponent IconName="@skill.Icon" Size="icon-medium" />
                         <span class="skillCard-name">@skill.Name</span>
                     </li>
                 }
@@ -50,14 +51,15 @@
         </ul>
 
     </section>
-
 </div>
 
-@code {
+@code
+{
     private Tool[]? _skills;
 
     protected override async Task OnInitializedAsync()
     {
-        _skills = await Http.FetchDataAsync<Tool[]>("https://raw.githubusercontent.com/FHumberto/FHumberto/main/src/data/skills.json");
+        _skills = await
+        Http.FetchDataAsync<Tool[]>("https://raw.githubusercontent.com/FHumberto/FHumberto/main/src/data/skills.json");
     }
 }
