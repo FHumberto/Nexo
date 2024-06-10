@@ -1,0 +1,231 @@
+#lead
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 4rem);
+}
+
+#summary,
+#services,
+#contact
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.lead-tittle-pri
+{
+    -webkit-animation: typing 3.5s steps(15, end), blink-caret 0.75s step-end infinite;
+    align-self: flex-start;
+    animation: typing 3.5s steps(15, end), blink-caret 0.75s step-end infinite;
+    border-right: 0.15em solid white;
+    overflow: hidden;
+    color: var(--link-color);
+    font-size: clamp(1rem, 8vw, 6rem);
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+
+@keyframes typing
+{
+    0%
+    {
+        width: 0;
+    }
+
+    100%
+    {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret
+{
+
+    0%, 100%
+    {
+        border-color: transparent;
+    }
+
+    50%
+    {
+        border-color: white;
+    }
+}
+
+.lead-tittle-sec
+{
+    font-size: clamp(1rem, 3.5vw, 2rem);
+}
+
+.lead-contact
+{
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.contact-icon
+{
+    display: flex;
+    justify-content: space-around;
+    border: 0.1rem solid white;
+    border-radius: 0.2rem;
+    padding: 0.5rem 0.9rem;
+    max-width: initial;
+}
+
+#summaryContainer
+{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.summaryCard
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.summaryCard-right
+{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.summaryCard-right-tools
+{
+    display: flex;
+    gap: 1rem;
+}
+
+.summaryCard-right-points
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tools-li,
+.points-li
+{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 0.1rem solid var(--border-color);
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.7rem;
+}
+
+.tools-li
+{
+    background-color: var(--grid-color-background);
+}
+
+.points-li
+{
+    background-color: var(--point-color-background);
+}
+
+.summaryCard:nth-child(even) img
+{
+    order: 1;
+}
+
+.summaryCard:nth-child(odd) img
+{
+    order: 0;
+}
+
+#servicesContainer
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.serviceCard
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    border: 0.1rem solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--grid-color-card-background);
+    padding: 2rem;
+}
+
+.serviceCard-title
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.serviceCard-body
+{
+    text-align: center;
+}
+
+#contactContainer
+{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+    #contactContainer > a
+    {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        gap: 0.2rem;
+        border: 0.1rem solid var(--border-color);
+        border-radius: 0.25rem;
+        padding: 0.25rem 0.7rem;
+    }
+
+.contact-icon,
+.tools-li,
+.points-li,
+.serviceCard
+{
+    transition: var(--transition-fadeInOut-color);
+}
+
+    .contact-icon:hover,
+    .tools-li:hover,
+    .points-li:hover,
+    .serviceCard:hover
+    {
+        background-color: var(--link-color);
+    }
+
+@media screen and (max-width: 870px)
+{
+    .summaryCard
+    {
+        flex-direction: column;
+    }
+
+    #servicesContainer
+    {
+        grid-template-columns: 1fr;
+    }
+}

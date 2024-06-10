@@ -1,0 +1,66 @@
+#topbar
+{
+    display: flex;
+    position: fixed;
+    right: 0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    background-color: var(--topbar-background);
+    padding: 0 2rem;
+    height: 3rem;
+}
+
+#topbar-logo
+{
+    height: 2rem;
+}
+
+#topbar-nav-toggle
+{
+    display: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-color: var(--button-color-border);
+    border-radius: .25rem;
+    background-color: var(--button-color-background);
+    padding: .25rem .75rem;
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+    #topbar-nav-toggle:hover
+    {
+        transition: background-color 0.25s;
+        background-color: var(--link-color);
+    }
+
+@media (max-width: 800px)
+{
+    #topbar-nav-toggle
+    {
+        display: block;
+    }
+
+    .topbar-nav-items
+    {
+        display: flex;
+        position: absolute;
+        top: 3rem;
+        left: 0;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: var(--topbar-background-sec);
+        padding: 1rem;
+        width: 100%;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .collapse
+    {
+        display: none;
+        visibility: collapse;
+    }
+}

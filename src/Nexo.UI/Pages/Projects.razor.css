@@ -1,0 +1,125 @@
+#projectsHeader
+{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#projectsHeader-lb
+{
+    border-bottom: 0.1rem solid white;
+}
+
+.projectsHeader-btm
+{
+    transition: background-color 0.5s ease-in-out;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    padding: 0.5rem;
+    width: 6rem;
+    text-align: center;
+}
+
+    .projectsHeader-btm:hover
+    {
+        background-color: var(--link-color);
+    }
+
+#projectsContainer
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.projectCard
+{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    transition: opacity 0.5s ease-in-out;
+    border: 0.1rem solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--grid-color-card-background);
+    padding: 1rem;
+    max-width: 400px;
+}
+
+.projectCard-cover
+{
+    height: 250px;
+}
+
+.projectCard-tools
+{
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.projectCard-tools-li
+{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 0.1rem solid var(--border-color);
+    border-radius: 0.25rem;
+    background-color: var(--grid-color-background);
+    padding: 0.25rem 0.7rem;
+}
+
+.projectCard:hover .projectLinks
+{
+    opacity: 1;
+}
+
+.projectCard::before
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    content: "";
+}
+
+.projectCard:hover::before
+{
+    opacity: 1;
+}
+
+.projectLinks
+{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    gap: 2rem;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.projectLinks-src
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+}
+
+    .projectLinks-src:hover
+    {
+        background-color: var(--link-color);
+    }

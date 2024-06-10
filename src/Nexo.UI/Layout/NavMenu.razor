@@ -1,0 +1,25 @@
+﻿<div id="topbar">
+    <img id="topbar-logo" src="/img/header-logo_fh.png" alt="FH Logo" />
+
+    <div>
+        <button id="topbar-nav-toggle" type="button" @onclick="ToggleNavMenu">☰</button>
+
+        <nav class="topbar-nav-items @NavCollapse">
+            <NavLink href="" Match="NavLinkMatch.All">Início</NavLink>
+            <NavLink href="about">Sobre</NavLink>
+            <NavLink href="education">Educação</NavLink>
+            <NavLink href="experience">Experiência</NavLink>
+            <NavLink href="projects">Projetos</NavLink>
+            <NavLink href="#contact">Contato</NavLink>
+        </nav>
+    </div>
+</div>
+
+@code
+{
+    private bool _collapseNavMenu = true;
+
+    private string? NavCollapse => _collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu() => _collapseNavMenu = !_collapseNavMenu;
+}

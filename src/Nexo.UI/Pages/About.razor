@@ -1,0 +1,65 @@
+﻿@page "/about"
+@using Nexo.UI.Models.Common
+@using Nexo.UI.Util
+@inject HttpClient Http
+
+<PageTitle>Sobre</PageTitle>
+
+<div class="section">
+
+    <section id="info">
+
+        <h2>Sobre Mim</h2>
+
+        <div id="infoContainer">
+
+            <img id="infoContainer-left" src="https://avatars.githubusercontent.com/u/7258900?v=4"
+                alt="profile-picture" />
+
+            <div id="infoContainer-right">
+                <p>
+                    Sou um profissional dedicado, apaixonado por tecnologia e com forte desejo de aprender e crescer na
+                    área de desenvolvimento de software.
+                    Sou bacharel em <strong>Ciências da Computação</strong> pela UERN e pós-graduado em
+                    <strong>Engenharia de Software</strong> pela Estácio.
+                    E atualmente estou me especializando em <strong>desenvolvimento de jogos digitais</strong>.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="skills">
+        <h2>Habilidades</h2>
+
+        <ul id="skillsContainer">
+            @if (_skills == null)
+            {
+                <p><em>Carregando...</em></p>
+            }
+            else
+            {
+                @foreach (var skill in _skills)
+                {
+                    <li class="skillCard" data-tooltip="@skill.Name">
+                        <IconComponent IconName="@skill.Icon" Size="icon-medium" />
+                        <span class="skillCard-name">@skill.Name</span>
+                    </li>
+                }
+            }
+        </ul>
+
+    </section>
+</div>
+
+@code
+{
+    private Tool[]? _skills;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _skills = await
+        Http.FetchDataAsync<Tool[]>("https://raw.githubusercontent.com/FHumberto/FHumberto/main/src/data/skills.json");
+    }
+}

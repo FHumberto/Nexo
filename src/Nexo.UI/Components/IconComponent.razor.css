@@ -1,0 +1,29 @@
+.icon-small
+{
+    font-size: clamp(1.25rem, 4vw, 1.5rem);
+}
+
+.icon-medium
+{
+    font-size: clamp(1.25rem, 4vw, 2rem);
+}
+
+.icon-plus
+{
+    font-size: clamp(2rem, 4vw, 4rem);
+}
+
+.icon-big
+{
+    font-size: clamp(4rem, 6vw, 6rem);
+}
+
+.icon-large
+{
+    font-size: clamp(6rem, 8vw, 8rem);
+}
+
+.icon-e-medium
+{
+    font-size: 2rem;
+}
