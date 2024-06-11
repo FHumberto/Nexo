@@ -106,6 +106,7 @@
 {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .summaryCard-right-points
@@ -227,5 +228,18 @@
     #servicesContainer
     {
         grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px)
+{
+    .points-li-icon
+    {
+        display: none;    
+    }
+
+    #contactContainer
+    {
+        flex-direction: column;
     }
 }
