@@ -81,7 +81,7 @@ article[b-fn6y7fh5ku]
 {
     main[b-fn6y7fh5ku]
     {
-        padding: 4rem 0 4rem 0;
+        padding: 4rem 1rem 4rem 1rem;
     }
 }
 /* /Layout/NavMenu.razor.rz.scp.css */
@@ -230,6 +230,15 @@ article[b-fn6y7fh5ku]
     #infoContainer[b-thj7z94z4n]
     {
         flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px)
+{
+    #infoContainer-left[b-thj7z94z4n]
+    {
+        width: 100%;
+        height: fit-content;
     }
 }
 /* /Pages/Education.razor.rz.scp.css */
@@ -494,6 +503,7 @@ article[b-fn6y7fh5ku]
 {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .summaryCard-right-points[b-9q287k2ukm]
@@ -617,6 +627,29 @@ article[b-fn6y7fh5ku]
         grid-template-columns: 1fr;
     }
 }
+
+@media screen and (max-width: 480px)
+{
+    .points-li-icon[b-9q287k2ukm]
+    {
+        display: none;    
+    }
+
+    #contactContainer[b-9q287k2ukm]
+    {
+        flex-direction: column;
+    }
+
+    .lead-tittle-sec[b-9q287k2ukm]
+    {
+        font-size: clamp(0.8rem, 3.5vw, 2rem);
+    }
+
+    .summaryCard > img[b-9q287k2ukm]
+    {
+        width: 100%;
+    }
+}
 /* /Pages/Projects.razor.rz.scp.css */
 #projectsHeader[b-ca3nsqfaz0]
 {
@@ -679,6 +712,7 @@ article[b-fn6y7fh5ku]
     display: flex;
     gap: 0.5rem;
     margin-top: 1rem;
+    flex-wrap: wrap;
 }
 
 .projectCard-tools-li[b-ca3nsqfaz0]
