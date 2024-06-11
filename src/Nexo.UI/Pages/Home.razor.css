@@ -94,6 +94,11 @@
     gap: 3rem;
 }
 
+.summaryCard > img
+{
+    width: 100%;
+}
+
 .summaryCard-right
 {
     display: flex;
@@ -241,5 +246,10 @@
     #contactContainer
     {
         flex-direction: column;
+    }
+
+    .lead-tittle-sec
+    {
+        font-size: clamp(0.8rem, 3.5vw, 2rem);
     }
 }
