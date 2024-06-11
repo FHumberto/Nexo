@@ -1,7 +1,7 @@
 ﻿@page "/"
 @inject HttpClient Http
 
-<PageTitle>Home</PageTitle>
+<PageTitle>FH | Início</PageTitle>
 
 <section id="lead">
     <div>
@@ -24,111 +24,113 @@
     </div>
 </section>
 
-<section id="summary" class="fade-in">
-    <div>
-        <h2>O que eu faço?</h2>
-    </div>
+ <section id="summary" class="fade-in">
+     <div>
+         <h2>O que eu faço?</h2>
+     </div>
 
-    <div id="summaryContainer">
-        @if (_summary is null)
-        {
-            <p>Carregando...</p>
-        }
-        else
-        {
-            foreach (var summary in _summary)
-            {
-                <div class="summaryCard">
-                    <img src="@summary.Cover" alt="@summary.Name" />
+     <div id="summaryContainer">
+         @if (_summary is null)
+         {
+             <p>Carregando...</p>
+         }
+         else
+         {
+             foreach (var summary in _summary)
+             {
+                 <div class="summaryCard">
+                     <img src="@summary.Cover" alt="@summary.Name" />
 
-                    <div class="summaryCard-right">
-                        <h3>@summary.Name</h3>
+                     <div class="summaryCard-right">
+                         <h3>@summary.Name</h3>
 
-                        <ul class="summaryCard-right-tools">
-                            @if (summary.Tools is not null)
-                            {
-                                @foreach (var tools in summary.Tools)
-                                {
-                                    <li class="tools-li" title="@tools.Name">
-                                        <IconComponent IconName="@tools.Icon" Size="icon-small" />
-                                    </li>
-                                }
-                            }
-                        </ul>
+                         <ul class="summaryCard-right-tools">
+                             @if (summary.Tools is not null)
+                             {
+                                 @foreach (var tools in summary.Tools)
+                                 {
+                                     <li class="tools-li" title="@tools.Name">
+                                         <IconComponent IconName="@tools.Icon" Size="icon-small" />
+                                     </li>
+                                 }
+                             }
+                         </ul>
 
-                        <ul class="summaryCard-right-points">
-                            @if (summary.Points is not null)
-                            {
-                                @foreach (string point in summary.Points)
-                                {
-                                    <li class="points-li">
-                                        <IconComponent IconName="BootstrapIcon.Check2Square" Size="icon-small" />
-                                        <span>@point</span>
-                                    </li>
-                                }
-                            }
-                        </ul>
-                    </div>
-                </div>
-            }
-        }
-    </div>
-</section>
+                         <ul class="summaryCard-right-points">
+                             @if (summary.Points is not null)
+                             {
+                                 @foreach (string point in summary.Points)
+                                 {
+                                     <li class="points-li">
+                                         <div class="points-li-icon">
+                                            <IconComponent IconName="BootstrapIcon.Check2Square" Size="icon-small" />
+                                         </div>
+                                         <span>@point</span>
+                                     </li>
+                                 }
+                             }
+                         </ul>
+                     </div>
+                 </div>
+             }
+         }
+     </div>
+ </section>
 
 <section id="services" class="fade-in">
-    <div>
-        <h2>Meus Serviços</h2>
-    </div>
+     <div>
+         <h2>Meus Serviços</h2>
+     </div>
 
-    <div id="servicesContainer">
-        @if (_services is null)
-        {
-            <p>Carregando...</p>
-        }
-        else
-        {
-            foreach (var service in _services)
-            {
-                <div class="serviceCard">
+     <div id="servicesContainer">
+         @if (_services is null)
+         {
+             <p>Carregando...</p>
+         }
+         else
+         {
+             foreach (var service in _services)
+             {
+                 <div class="serviceCard">
 
-                    <h3>@service.Name</h3>
+                     <h3>@service.Name</h3>
 
-                    <IconComponent IconName="@service.Icon" Size="icon-large" />
+                     <IconComponent IconName="@service.Icon" Size="icon-large" />
 
-                    <div class="serviceCard-body">
-                        <p>@service.Body</p>
-                    </div>
-                </div>
-            }
-        }
-    </div>
-</section>
+                     <div class="serviceCard-body">
+                         <p>@service.Body</p>
+                     </div>
+                 </div>
+             }
+         }
+     </div>
+ </section>
 
-<section id="contact" class="fade-in">
+ <section id="contact" class="fade-in">
 
-    <div>
-        <h2>Contato</h2>
-    </div>
+     <div>
+         <h2>Contato</h2>
+     </div>
 
-    <div id="contactContainer">
-        <a class="contact-icon" href="https://www.linkedin.com/in/fhumberto" title="LinkedIn" target=" _blank">
-            <IconComponent IconName="DeviconPlain.Linkedin" Size="icon-medium" />
-            <span>Linkedin</span>
-        </a>
-        <a class="contact-icon" href="https://github.com/FHumberto" title="GithubProfile" target="_blank">
-            <IconComponent IconName="BootstrapIcon.Github" Size="icon-medium" />
-            <span>GitHub</span>
-        </a>
-        <a class="contact-icon" href="https://github.com/FHumberto/FHumberto/raw/main/src/doc/Curriculo.pdf"
-           title="CurriculumVitae" target="_blank">
-            <IconComponent IconName="BootstrapIcon.PersonBadge" Size="icon-medium" />
-            <span>Currículo</span>
-        </a>
-        <a class="contact-icon" href="mailto:fhumberto.trab@hotmail.com"
-           title="E-Mail">
-            <IconComponent IconName="MdiIcon.Email" Size="icon-medium" />
-            <span>E-Mail</span>
-        </a>
-    </div>
+     <div id="contactContainer">
+         <a class="contact-icon" href="https://www.linkedin.com/in/fhumberto" title="LinkedIn" target=" _blank">
+             <IconComponent IconName="DeviconPlain.Linkedin" Size="icon-medium" />
+             <span>Linkedin</span>
+         </a>
+         <a class="contact-icon" href="https://github.com/FHumberto" title="GithubProfile" target="_blank">
+             <IconComponent IconName="BootstrapIcon.Github" Size="icon-medium" />
+             <span>GitHub</span>
+         </a>
+         <a class="contact-icon" href="https://github.com/FHumberto/FHumberto/raw/main/src/doc/Curriculo.pdf"
+            title="CurriculumVitae" target="_blank">
+             <IconComponent IconName="BootstrapIcon.PersonBadge" Size="icon-medium" />
+             <span>Currículo</span>
+         </a>
+         <a class="contact-icon" href="mailto:fhumberto.trab@hotmail.com"
+            title="E-Mail">
+             <IconComponent IconName="MdiIcon.Email" Size="icon-medium" />
+             <span>E-Mail</span>
+         </a>
+     </div>
 
-</section>
+ </section>
