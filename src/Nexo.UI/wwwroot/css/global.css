@@ -7,7 +7,7 @@
 :root
 {
     --body-background: rgb(31, 29, 29);
-    --topbar-background: rgba(0, 0, 0, 0.4);
+    --topbar-background: rgba(0, 0, 0, 0.91);
     --topbar-background-sec: rgb(51, 51, 51);
     --button-color-background: rgba(255, 255, 255, 0.1);
     --button-color-border: rgba(255, 255, 255, 0.1);
