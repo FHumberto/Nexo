@@ -1,0 +1,204 @@
+﻿@font-face
+{
+    src: url('../font/JetBrainsMono-Medium.ttf') format('truetype');
+    font-family: 'JetBrains Mono';
+}
+
+:root
+{
+    --body-background: rgb(31, 29, 29);
+    --topbar-background: rgba(0, 0, 0, 0.4);
+    --topbar-background-sec: rgb(51, 51, 51);
+    --button-color-background: rgba(255, 255, 255, 0.1);
+    --button-color-border: rgba(255, 255, 255, 0.1);
+    --button-color-background-t: rgba(0, 0, 0, 0.4);
+    --text-color: rgb(255, 255, 255);
+    --text-color-sec: rgb(0, 0, 0);
+    --link-color: rgb(148, 14, 40);
+    --strong-color: rgb(221, 72, 101);
+    --icon-color-background: rgb(53, 49, 49);
+    --point-color-background: rgb(38, 41, 44);
+    --grid-color-card-background: rgb(38, 38, 38);
+    --border-color: rgb(0, 0, 0);
+    --border-radius: 0.5rem;
+    --transition-fadeInOut: opacity 0.5s ease-in-out;
+    --transition-fadeInOut-color: background-color 0.5s ease-in-out;
+}
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    scrollbar-color: rgb(82, 22, 22) rgb(255, 255, 255, 0.50);
+    scrollbar-width: thin;
+    color: var(--text-color);
+    font-family: 'JetBrains Mono', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+    /* chrome */
+    *::-webkit-scrollbar
+    {
+        width: 12px;
+    }
+
+    *::-webkit-scrollbar-track
+    {
+        background: rgb(255, 255, 255, 0.50);
+    }
+
+    *::-webkit-scrollbar-thumb
+    {
+        border: 3px solid rgb(255, 255, 255, 0.50);
+        border-radius: 20px;
+        background-color: rgb(82, 22, 22);
+    }
+
+
+body
+{
+    background-color: var(--body-background);
+    line-height: 1.3;
+}
+
+a
+{
+    transition: color 0.5s;
+    color: var(--text-color);
+}
+
+    a:hover
+    {
+        color: var(--link-color);
+    }
+
+strong
+{
+    color: var(--strong-color);
+}
+
+img
+{
+    border-radius: var(--border-radius);
+}
+
+h2
+{
+    color: var(--strong-color);
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+}
+
+h3
+{
+    font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+}
+
+p,
+i,
+span
+{
+    font-size: 0.95rem;
+}
+
+p
+{
+    text-align: justify;
+}
+
+.subSection
+{
+    color: var(--strong-color);
+}
+
+.tooltip-container
+{
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+    .tooltip-container::before
+    {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+        border-radius: 5px;
+        background-color: #333;
+        padding: 5px 10px;
+        content: attr(data-tooltip);
+        color: #fff;
+        white-space: nowrap;
+    }
+
+    .tooltip-container:hover::before
+    {
+        visibility: visible;
+        opacity: 0.9;
+    }
+
+.section
+{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.fade-in
+{
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+    .fade-in.visible
+    {
+        opacity: 1;
+    }
+
+.validation-errors
+{
+    margin-bottom: 1rem;
+    border: 0.1rem solid red;
+    border-radius: 0.2rem;
+    background: #4503104f;
+    padding: 1rem;
+}
+
+form
+{
+    width: 100%;
+}
+
+input,
+textarea,
+select,
+option
+{
+    border: none;
+    background: #222222;
+    color: white;
+}
+
+.inputField
+{
+    display: block;
+    padding: 0.2rem;
+    width: 100%;
+    line-height: 1.25rem;
+}
+
+.textArea
+{
+    margin-top: 1rem;
+    height: 10rem;
+    resize: none;
+}
