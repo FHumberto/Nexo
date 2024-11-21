@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
@@ -10,8 +10,8 @@
     <PackageReference Include="Blazicons.Bootstrap" Version="2.0.30" />
     <PackageReference Include="Blazicons.Devicon" Version="1.0.3" />
     <PackageReference Include="Blazicons.MaterialDesignIcons" Version="2.0.19" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.5" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.5" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="9.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="9.0.0" PrivateAssets="all" />
   </ItemGroup>
 
 </Project>
