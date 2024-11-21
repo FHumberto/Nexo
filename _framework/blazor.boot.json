@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Nexo.UI",
   "resources": {
-    "hash": "sha256-tZ7faU6QtJE8urtwOi29VcLxiMoDfxqb1wto5TL7cZk=",
+    "hash": "sha256-pxXC6XIg8cZde7S9VZBgh02pU/RDPBpmCGctt6bllgw=",
     "fingerprinting": {
       "Blazicons.Bootstrap.5fmc1espd1.wasm": "Blazicons.Bootstrap.wasm",
       "Blazicons.Devicon.vz5b7ul0fq.wasm": "Blazicons.Devicon.wasm",
@@ -23,7 +23,7 @@
       "Microsoft.JSInterop.426305nhc4.wasm": "Microsoft.JSInterop.wasm",
       "Microsoft.JSInterop.WebAssembly.heoad7mujs.wasm": "Microsoft.JSInterop.WebAssembly.wasm",
       "netstandard.hckpsuo5mx.wasm": "netstandard.wasm",
-      "Nexo.UI.qqj1okqwcx.wasm": "Nexo.UI.wasm",
+      "Nexo.UI.l3rjs16bej.wasm": "Nexo.UI.wasm",
       "System.Collections.Concurrent.g0ny4l55tq.wasm": "System.Collections.Concurrent.wasm",
       "System.Collections.Immutable.4p5o6w4a64.wasm": "System.Collections.Immutable.wasm",
       "System.Collections.dbz1djrf6r.wasm": "System.Collections.wasm",
@@ -91,7 +91,7 @@
       "Microsoft.JSInterop.426305nhc4.wasm": "sha256-lNqP2ot1f2PhPr/5ZgFueuYFhUgz/pVAaqmi0u4H8Lo=",
       "Microsoft.JSInterop.WebAssembly.heoad7mujs.wasm": "sha256-99wG3VH14sWkwPaF5rX6YAcJvtAhDuqonwihvj2m5HA=",
       "netstandard.hckpsuo5mx.wasm": "sha256-QcepuJ66I5oNuSt5c2y51CV7rkTqspG1lF99C/X6YkI=",
-      "Nexo.UI.qqj1okqwcx.wasm": "sha256-MqI8SbxYRKwUvQI9JHKZwqiX5+M0SfDZ/8yrROBcD/E=",
+      "Nexo.UI.l3rjs16bej.wasm": "sha256-8W9noJU6bx5CRrjzADUgQu6FzrN1f4jl78f2AGHuXwA=",
       "System.Collections.Concurrent.g0ny4l55tq.wasm": "sha256-ADGWx8rPfs5ftD/wCG/cFqw585w1zgvqniZJtb7Jc2Q=",
       "System.Collections.Immutable.4p5o6w4a64.wasm": "sha256-KMeffaq/Vtz03KZ0FBqktKzzgrNwJu04cl/UEYmIFuA=",
       "System.Collections.dbz1djrf6r.wasm": "sha256-CTI3d29LfaUnzMlS5L7tcLRQK0I/Rf4pQw9nDbpusnE=",
