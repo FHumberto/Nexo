@@ -27,8 +27,8 @@ Este projeto foi desenvolvido com o intuito de consolidar todas as informações
 O projeto foi construído utilizando as seguintes tecnologias:
 
 * Blazor WebAssembly
-* C# 10
-* .NET 8
+* C# 13
+* .NET 9
 
 ### **Fundamentos**
 
