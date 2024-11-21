@@ -4,6 +4,11 @@ VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nexo.UI", "src\Nexo.UI\Nexo.UI.csproj", "{D08D9E78-026A-4AF6-9F38-2F7D1AF75007}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4A100314-CF64-4985-A185-68B3F90C39A4}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\deploy.yml = .github\workflows\deploy.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,4 +27,3 @@ Global
 		SolutionGuid = {909B3319-FC14-45FE-99DA-BA43322DFC6C}
 	EndGlobalSection
 EndGlobal
-bal
